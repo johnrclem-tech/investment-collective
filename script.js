@@ -1,9 +1,18 @@
-const footerStyles=document.createElement('link');
-footerStyles.rel='stylesheet';
-footerStyles.href='site-footer.css';
-document.head.appendChild(footerStyles);
+const layoutStyles=document.createElement('link');
+layoutStyles.rel='stylesheet';
+layoutStyles.href='site-footer.css';
+document.head.appendChild(layoutStyles);
 
-const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const currentPage=window.location.pathname.split('/').pop()||'index.html';
+
+const headerLinks=[
+  ['Investment Office','investment-office.html'],
+  ['Allocation Insights','allocation-insights.html'],
+  ['Decision Journal','decision-journal.html'],
+  ['Collective Intelligence','collective-intelligence.html'],
+  ['Peer Councils','peer-councils.html'],
+  ['One Decision','one-decision.html']
+];
 
 const footerLinks=[
   ['Home','index.html'],
@@ -19,15 +28,79 @@ const footerLinks=[
   ['Founding Members','founding-members.html'],
   ['Apply','apply.html']
 ];
-document.querySelectorAll('.footer-links').forEach(footer=>{
-  footer.setAttribute('aria-label','Site pages');
-  footer.replaceChildren(...footerLinks.map(([label,href])=>{
-    const link=document.createElement('a');
-    link.href=href;
-    link.textContent=label;
-    return link;
-  }));
-});
+
+function createNavLink(label,href,className=''){
+  const link=document.createElement('a');
+  link.href=href;
+  link.textContent=label;
+  if(className)link.className=className;
+  if(currentPage===href){
+    link.classList.add('is-active');
+    link.setAttribute('aria-current','page');
+  }
+  return link;
+}
+
+function renderSharedHeader(){
+  const existingHeaders=[...document.querySelectorAll('header.site-header')];
+  let header=existingHeaders.shift();
+  existingHeaders.forEach(element=>element.remove());
+
+  if(!header){
+    header=document.createElement('header');
+    document.body.prepend(header);
+  }
+
+  header.className='site-header';
+
+  const brand=createNavLink('Investment Collective','index.html','brand');
+  const nav=document.createElement('nav');
+  nav.className='nav-links';
+  nav.setAttribute('aria-label','Primary navigation');
+  nav.replaceChildren(...headerLinks.map(([label,href])=>createNavLink(label,href)));
+
+  const apply=createNavLink('Apply',currentPage==='apply.html'?'#application':'apply.html','nav-cta');
+  if(currentPage==='apply.html'){
+    apply.classList.add('is-active');
+    apply.setAttribute('aria-current','page');
+  }
+
+  header.replaceChildren(brand,nav,apply);
+}
+
+function renderSharedFooter(){
+  const existingFooters=[...document.querySelectorAll('footer.site-footer')];
+  let footer=existingFooters.shift();
+  existingFooters.forEach(element=>element.remove());
+
+  if(!footer){
+    footer=document.createElement('footer');
+    document.body.appendChild(footer);
+  }
+
+  footer.className='site-footer';
+
+  const identity=document.createElement('div');
+  identity.className='site-footer-identity';
+  const name=document.createElement('strong');
+  name.textContent='Investment Collective';
+  const tagline=document.createElement('span');
+  tagline.textContent='Independent Advice. Collective Intelligence.';
+  identity.replaceChildren(name,tagline);
+
+  const nav=document.createElement('nav');
+  nav.className='footer-links';
+  nav.setAttribute('aria-label','Site pages');
+  nav.replaceChildren(...footerLinks.map(([label,href])=>createNavLink(label,href)));
+
+  footer.replaceChildren(identity,nav);
+}
+
+renderSharedHeader();
+renderSharedFooter();
+
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 if(document.querySelector('.dashboard-shell')){
   const demo=document.createElement('script');
