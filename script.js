@@ -1,3 +1,8 @@
+const footerStyles=document.createElement('link');
+footerStyles.rel='stylesheet';
+footerStyles.href='site-footer.css';
+document.head.appendChild(footerStyles);
+
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 const footerLinks=[
