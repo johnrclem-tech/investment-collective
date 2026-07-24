@@ -1,5 +1,11 @@
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
+if(document.querySelector('.dashboard-shell')){
+  const demo=document.createElement('script');
+  demo.src='investment-office-demo.js';
+  document.body.appendChild(demo);
+}
+
 const applicationForm=document.querySelector('#membership-application');
 if(applicationForm){
   applicationForm.addEventListener('submit',event=>{
