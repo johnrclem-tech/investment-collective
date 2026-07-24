@@ -1,5 +1,29 @@
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
+const footerLinks=[
+  ['Home','index.html'],
+  ['Manifesto','manifesto.html'],
+  ['Investment Office','investment-office.html'],
+  ['Allocation Insights','allocation-insights.html'],
+  ['Decision Journal','decision-journal.html'],
+  ['Collective Intelligence','collective-intelligence.html'],
+  ['Peer Councils','peer-councils.html'],
+  ['One Decision','one-decision.html'],
+  ['Your First Year','your-first-year.html'],
+  ['Investment Legacy','investment-legacy.html'],
+  ['Founding Members','founding-members.html'],
+  ['Apply','apply.html']
+];
+document.querySelectorAll('.footer-links').forEach(footer=>{
+  footer.setAttribute('aria-label','Site pages');
+  footer.replaceChildren(...footerLinks.map(([label,href])=>{
+    const link=document.createElement('a');
+    link.href=href;
+    link.textContent=label;
+    return link;
+  }));
+});
+
 if(document.querySelector('.dashboard-shell')){
   const demo=document.createElement('script');
   demo.src='investment-office-demo.js';
