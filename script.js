@@ -52,25 +52,22 @@ const main=document.querySelector('main');
 if(main&&!main.id)main.id='main-content';
 
 const headerLinks=[
-  ['Investment Office','investment-office.html'],
-  ['Allocation Insights','allocation-insights.html'],
-  ['Decision Journal','decision-journal.html'],
-  ['Collective Intelligence','collective-intelligence.html'],
-  ['Peer Councils','peer-councils.html'],
-  ['One Decision','one-decision.html']
+  ['Advisor','investment-office.html'],
+  ['Peers','peer-councils.html'],
+  ['Community','collective-intelligence.html'],
+  ['How It Works','how-membership-works.html']
 ];
 
 const footerLinks=[
   ['Home','index.html'],
-  ['Manifesto','manifesto.html'],
-  ['Investment Office','investment-office.html'],
+  ['Advisor','investment-office.html'],
+  ['Peers','peer-councils.html'],
+  ['Community','collective-intelligence.html'],
+  ['How It Works','how-membership-works.html'],
+  ['One Decision','one-decision.html'],
   ['Allocation Insights','allocation-insights.html'],
   ['Decision Journal','decision-journal.html'],
-  ['Collective Intelligence','collective-intelligence.html'],
-  ['Peer Councils','peer-councils.html'],
-  ['One Decision','one-decision.html'],
   ['Your First Year','your-first-year.html'],
-  ['How Membership Works','how-membership-works.html'],
   ['Investment Legacy','investment-legacy.html'],
   ['Founding Members','founding-members.html'],
   ['Apply','apply.html']
