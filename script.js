@@ -8,6 +8,40 @@ designStyles.rel='stylesheet';
 designStyles.href='design-system.css';
 document.head.appendChild(designStyles);
 
+const COMPANY_NAME='syndicateIQ';
+const LEGACY_COMPANY_NAME='Investment Collective';
+
+function applyCompanyName(){
+  if(document.title.includes(LEGACY_COMPANY_NAME)){
+    document.title=document.title.replaceAll(LEGACY_COMPANY_NAME,COMPANY_NAME);
+  }
+
+  document.querySelectorAll('[content],[title],[aria-label],[placeholder]').forEach(element=>{
+    ['content','title','aria-label','placeholder'].forEach(attribute=>{
+      const value=element.getAttribute(attribute);
+      if(value&&value.includes(LEGACY_COMPANY_NAME)){
+        element.setAttribute(attribute,value.replaceAll(LEGACY_COMPANY_NAME,COMPANY_NAME));
+      }
+    });
+  });
+
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      const parent=node.parentElement;
+      if(!parent||['SCRIPT','STYLE','NOSCRIPT'].includes(parent.tagName))return NodeFilter.FILTER_REJECT;
+      return node.nodeValue.includes(LEGACY_COMPANY_NAME)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+    }
+  });
+
+  const textNodes=[];
+  while(walker.nextNode())textNodes.push(walker.currentNode);
+  textNodes.forEach(node=>{
+    node.nodeValue=node.nodeValue.replaceAll(LEGACY_COMPANY_NAME,COMPANY_NAME);
+  });
+}
+
+applyCompanyName();
+
 const currentPage=window.location.pathname.split('/').pop()||'index.html';
 const main=document.querySelector('main');
 if(main&&!main.id)main.id='main-content';
@@ -66,7 +100,7 @@ function renderSharedHeader(){
   skipLink.href='#main-content';
   skipLink.textContent='Skip to content';
 
-  const brand=createNavLink('Investment Collective','index.html','brand');
+  const brand=createNavLink(COMPANY_NAME,'index.html','brand');
   const nav=document.createElement('nav');
   nav.className='nav-links';
   nav.setAttribute('aria-label','Primary navigation');
@@ -96,7 +130,7 @@ function renderSharedFooter(){
   const identity=document.createElement('div');
   identity.className='site-footer-identity';
   const name=document.createElement('strong');
-  name.textContent='Investment Collective';
+  name.textContent=COMPANY_NAME;
   const tagline=document.createElement('span');
   tagline.textContent='Independent Advice. Collective Intelligence.';
   identity.replaceChildren(name,tagline);
@@ -143,7 +177,7 @@ if(applicationForm){
     const data=new FormData(applicationForm);
     const complexities=data.getAll('complexity').join(', ')||'Not specified';
     const lines=[
-      'Investment Collective — Confidential Membership Inquiry','',
+      `${COMPANY_NAME} — Confidential Membership Inquiry`,'',
       `Name: ${data.get('firstName')} ${data.get('lastName')}`,
       `Email: ${data.get('email')}`,
       `Phone: ${data.get('phone')||'Not provided'}`,
@@ -157,7 +191,7 @@ if(applicationForm){
       `Timing: ${data.get('timing')}`,
       `Two-year founding commitment: ${data.get('commitment')}`
     ];
-    const subject=encodeURIComponent(`Founding Membership Inquiry — ${data.get('firstName')} ${data.get('lastName')}`);
+    const subject=encodeURIComponent(`${COMPANY_NAME} Founding Membership Inquiry — ${data.get('firstName')} ${data.get('lastName')}`);
     const body=encodeURIComponent(lines.join('\n'));
     if(status){
       status.textContent='Opening your email application for review…';
