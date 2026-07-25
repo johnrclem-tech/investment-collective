@@ -24,6 +24,7 @@ const footerLinks=[
   ['Peer Councils','peer-councils.html'],
   ['One Decision','one-decision.html'],
   ['Your First Year','your-first-year.html'],
+  ['How Membership Works','how-membership-works.html'],
   ['Investment Legacy','investment-legacy.html'],
   ['Founding Members','founding-members.html'],
   ['Apply','apply.html']
