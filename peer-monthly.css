@@ -14,9 +14,11 @@
 .meeting-topic-list{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
+  column-gap:34px;
+  row-gap:0;
   max-width:1180px;
   margin-top:48px;
+  border-top:1px solid rgba(255,255,255,.10);
 }
 
 .meeting-topic{
@@ -24,11 +26,8 @@
   grid-template-columns:48px 1fr;
   gap:16px;
   align-items:start;
-  padding:22px;
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:18px;
-  background:rgba(255,255,255,.045);
-  backdrop-filter:blur(10px);
+  padding:24px 0;
+  border-bottom:1px solid rgba(255,255,255,.10);
 }
 
 .topic-icon{
@@ -103,7 +102,7 @@
 
 @media(max-width:620px){
   .meeting-topic-list{grid-template-columns:1fr}
-  .meeting-topic{grid-template-columns:42px 1fr;padding:18px}
+  .meeting-topic{grid-template-columns:42px 1fr;padding:20px 0}
   .topic-icon{width:40px;height:40px}
   .rhythm-agenda-links{flex-direction:column;align-items:stretch}
   .rhythm-agenda-links a{justify-content:center}
