@@ -202,3 +202,5 @@ if(applicationForm){
     window.location.href=`mailto:hello@investmentcollective.com?subject=${subject}&body=${body}`;
   });
 }
+
+// Deployment trigger after Vercel project cleanup.
