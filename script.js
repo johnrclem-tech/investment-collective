@@ -52,7 +52,7 @@ const main=document.querySelector('main');
 if(main&&!main.id)main.id='main-content';
 
 const headerLinks=[
-  ['Advisor','investment-office.html'],
+  ['Advisor','advisor.html'],
   ['Peers','peer-councils.html'],
   ['Community','collective-intelligence.html'],
   ['How It Works','how-membership-works.html']
@@ -60,7 +60,7 @@ const headerLinks=[
 
 const footerLinks=[
   ['Home','index.html'],
-  ['Advisor','investment-office.html'],
+  ['Advisor','advisor.html'],
   ['Peers','peer-councils.html'],
   ['Community','collective-intelligence.html'],
   ['How It Works','how-membership-works.html'],
