@@ -3,6 +3,11 @@ layoutStyles.rel='stylesheet';
 layoutStyles.href='site-footer.css';
 document.head.appendChild(layoutStyles);
 
+const designStyles=document.createElement('link');
+designStyles.rel='stylesheet';
+designStyles.href='design-system.css';
+document.head.appendChild(designStyles);
+
 const currentPage=window.location.pathname.split('/').pop()||'index.html';
 const main=document.querySelector('main');
 if(main&&!main.id)main.id='main-content';
