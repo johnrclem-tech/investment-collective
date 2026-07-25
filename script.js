@@ -4,6 +4,8 @@ layoutStyles.href='site-footer.css';
 document.head.appendChild(layoutStyles);
 
 const currentPage=window.location.pathname.split('/').pop()||'index.html';
+const main=document.querySelector('main');
+if(main&&!main.id)main.id='main-content';
 
 const headerLinks=[
   ['Investment Office','investment-office.html'],
@@ -54,6 +56,11 @@ function renderSharedHeader(){
 
   header.className='site-header';
 
+  const skipLink=document.createElement('a');
+  skipLink.className='skip-link';
+  skipLink.href='#main-content';
+  skipLink.textContent='Skip to content';
+
   const brand=createNavLink('Investment Collective','index.html','brand');
   const nav=document.createElement('nav');
   nav.className='nav-links';
@@ -66,7 +73,7 @@ function renderSharedHeader(){
     apply.setAttribute('aria-current','page');
   }
 
-  header.replaceChildren(brand,nav,apply);
+  header.replaceChildren(skipLink,brand,nav,apply);
 }
 
 function renderSharedFooter(){
@@ -100,8 +107,21 @@ function renderSharedFooter(){
 renderSharedHeader();
 renderSharedFooter();
 
-const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const revealElements=[...document.querySelectorAll('.reveal')];
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(reduceMotion||!('IntersectionObserver' in window)){
+  revealElements.forEach(element=>element.classList.add('visible'));
+}else{
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12});
+  revealElements.forEach(element=>observer.observe(element));
+}
 
 if(document.querySelector('.dashboard-shell')){
   const demo=document.createElement('script');
@@ -134,8 +154,10 @@ if(applicationForm){
     ];
     const subject=encodeURIComponent(`Founding Membership Inquiry — ${data.get('firstName')} ${data.get('lastName')}`);
     const body=encodeURIComponent(lines.join('\n'));
-    status.textContent='Opening your email application for review…';
-    status.className='form-status success';
+    if(status){
+      status.textContent='Opening your email application for review…';
+      status.className='form-status success';
+    }
     window.location.href=`mailto:hello@investmentcollective.com?subject=${subject}&body=${body}`;
   });
 }
