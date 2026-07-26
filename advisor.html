@@ -8,77 +8,87 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="advisor.css">
 </head>
-<body>
+<body class="advisor-page">
   <header class="site-header"></header>
 
   <main>
-    <section class="page-hero advisor-hero">
-      <div>
+    <section class="advisor-cinematic-hero">
+      <div class="advisor-cinematic-copy">
         <p class="eyebrow">Advisor</p>
         <h1>One advisor who knows<br><span>the whole picture.</span></h1>
-        <p class="page-lede">Your syndicateIQ advisor understands the portfolio, private investments, liquidity, trusts, taxes, businesses, commitments, and family priorities before recommending what should happen next.</p>
+        <p class="hero-lede">Your syndicateIQ advisor understands the portfolio, private investments, liquidity, trusts, taxes, businesses, commitments, and family priorities before recommending what should happen next.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#advisor-workflow">See How the Advisor Works</a>
+          <a class="button light" href="#advisor-workflow">See How the Advisor Works</a>
           <a class="button secondary" href="apply.html">Begin a Conversation</a>
         </div>
       </div>
+      <div class="advisor-cinematic-orbit" aria-hidden="true"></div>
+    </section>
 
-      <div class="page-visual capital-map" role="img" aria-label="Family Capital Map showing the syndicateIQ advisor connecting investments, liquidity, trusts and entities, taxes, insurance, businesses, family priorities, philanthropy, and the family's outside specialists.">
-        <div class="capital-map-head">
-          <p class="eyebrow">Family Capital Map</p>
-          <span>One advisor. The full picture. Every relationship. Every priority.</span>
+    <section class="editorial-section advisor-picture-section">
+      <div class="advisor-picture-copy">
+        <p class="eyebrow">The complete family picture</p>
+        <h2>The family stays<br>at the center.</h2>
+        <p>Your advisor maintains one connected understanding of the family’s investments, liquidity, trusts, taxes, businesses, commitments, risks, philanthropy, and priorities. Advice begins with that complete context—not an isolated account or transaction.</p>
+        <div class="picture-context-list" aria-label="Family context maintained by the advisor">
+          <span>Investments</span>
+          <span>Liquidity</span>
+          <span>Trusts &amp; entities</span>
+          <span>Taxes</span>
+          <span>Businesses</span>
+          <span>Commitments</span>
+          <span>Risk</span>
+          <span>Family priorities</span>
         </div>
+      </div>
 
-        <div class="map-stage">
-          <span class="map-orbit map-orbit-outer" aria-hidden="true"></span>
-          <span class="map-orbit map-orbit-inner" aria-hidden="true"></span>
-          <span class="map-orbit map-orbit-core" aria-hidden="true"></span>
-          <span class="map-spoke spoke-1" aria-hidden="true"></span>
-          <span class="map-spoke spoke-2" aria-hidden="true"></span>
-          <span class="map-spoke spoke-3" aria-hidden="true"></span>
-          <span class="map-spoke spoke-4" aria-hidden="true"></span>
-          <span class="map-spoke spoke-5" aria-hidden="true"></span>
-          <span class="map-spoke spoke-6" aria-hidden="true"></span>
-          <span class="map-spoke spoke-7" aria-hidden="true"></span>
-          <span class="map-spoke spoke-8" aria-hidden="true"></span>
-
-          <div class="map-center">
-            <div>
-              <small>syndicateIQ</small>
-              <strong>Advisor</strong>
-              <em>Connects the whole picture</em>
+      <div class="relationship-rings reveal" role="img" aria-label="The Harrison Family at the center, surrounded by its syndicateIQ Advisor, confidential Peer Council, and broader member Community.">
+        <div class="relationship-ring community-ring">
+          <span class="ring-label">Community</span>
+          <small>Relevant member experience</small>
+          <div class="relationship-ring peers-ring">
+            <span class="ring-label">Peer Council</span>
+            <small>Trusted recurring perspective</small>
+            <div class="relationship-ring advisor-ring">
+              <span class="ring-label">Advisor</span>
+              <small>Independent judgment</small>
+              <div class="relationship-center">
+                <span>Harrison Family</span>
+                <strong>One complete picture</strong>
+              </div>
             </div>
           </div>
-
-          <div class="map-domains">
-            <div class="map-domain domain-investments"><span class="map-icon" aria-hidden="true">↗</span><strong>Investments</strong></div>
-            <div class="map-domain domain-liquidity"><span class="map-icon" aria-hidden="true">◉</span><strong>Liquidity</strong></div>
-            <div class="map-domain domain-trusts"><span class="map-icon" aria-hidden="true">§</span><strong>Trusts &amp; Entities</strong></div>
-            <div class="map-domain domain-taxes"><span class="map-icon" aria-hidden="true">%</span><strong>Taxes</strong></div>
-            <div class="map-domain domain-insurance"><span class="map-icon" aria-hidden="true">◇</span><strong>Insurance</strong></div>
-            <div class="map-domain domain-family"><span class="map-icon" aria-hidden="true">◎</span><strong>Family Priorities</strong></div>
-            <div class="map-domain domain-philanthropy"><span class="map-icon" aria-hidden="true">♥</span><strong>Philanthropy</strong></div>
-            <div class="map-domain domain-businesses"><span class="map-icon" aria-hidden="true">◆</span><strong>Businesses</strong></div>
-          </div>
-
-          <div class="map-specialists" aria-label="Specialists coordinated by the advisor">
-            <div class="map-specialist specialist-cpa">CPA</div>
-            <div class="map-specialist specialist-attorney">Estate Attorney</div>
-            <div class="map-specialist specialist-trustee">Trustee</div>
-            <div class="map-specialist specialist-insurance">Insurance Specialist</div>
-            <div class="map-specialist specialist-managers">Investment Managers</div>
-            <div class="map-specialist specialist-banker">Banker</div>
-          </div>
         </div>
-
-        <p class="capital-map-caption">Clarity · Coordination · Confidence</p>
       </div>
     </section>
 
-    <section class="dark-band advisor-principle">
-      <p class="eyebrow">The relationship</p>
-      <h2>Your first call before an important financial decision.</h2>
-      <p>Your advisor helps identify the real question, assembles the relevant family context, brings in the right specialists and peer experience, and keeps the decision moving after the meeting ends.</p>
+    <section class="dark-band advisor-coordination-section">
+      <div class="coordination-copy">
+        <p class="eyebrow">Coordinated around the family</p>
+        <h2>One advisor keeps everyone working from the same context.</h2>
+        <p>Your advisor does not replace the family’s specialists. The advisor connects their work, identifies gaps and conflicts, brings the right people into each decision, and makes sure recommendations become coordinated action.</p>
+        <div class="coordination-principles">
+          <span>One family context</span>
+          <span>Clear decision owner</span>
+          <span>Coordinated follow-through</span>
+        </div>
+      </div>
+
+      <div class="specialist-network reveal" role="img" aria-label="The syndicateIQ Advisor coordinating the family’s CPA, estate attorney, trustee, insurance specialist, banker, custodian, and investment managers.">
+        <span class="network-orbit" aria-hidden="true"></span>
+        <span class="network-line line-one" aria-hidden="true"></span>
+        <span class="network-line line-two" aria-hidden="true"></span>
+        <span class="network-line line-three" aria-hidden="true"></span>
+        <span class="network-line line-four" aria-hidden="true"></span>
+        <div class="network-center"><small>syndicateIQ</small><strong>Advisor</strong><span>Coordinates the team</span></div>
+        <div class="specialist-node node-cpa">CPA</div>
+        <div class="specialist-node node-attorney">Estate Attorney</div>
+        <div class="specialist-node node-trustee">Trustee</div>
+        <div class="specialist-node node-insurance">Insurance Specialist</div>
+        <div class="specialist-node node-banker">Banker</div>
+        <div class="specialist-node node-custodian">Custodian</div>
+        <div class="specialist-node node-managers">Investment Managers</div>
+      </div>
     </section>
 
     <section class="editorial-section advisor-role-section" id="advisor-workflow">
