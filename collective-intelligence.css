@@ -62,10 +62,10 @@
 .find-field span:nth-child(3n+1){background:rgba(91,108,255,.07);border-color:rgba(91,108,255,.14)}
 .find-field span:nth-child(4n+2){background:rgba(41,211,255,.07);border-color:rgba(41,211,255,.14)}
 
-.decision-anatomy-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.decision-anatomy-section{display:block}
 .decision-anatomy-copy h2{max-width:760px}
-.decision-anatomy-copy p{max-width:700px;font-size:17px;line-height:1.7}
-.decision-anatomy{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.decision-anatomy-copy p{max-width:820px;font-size:17px;line-height:1.7}
+.decision-anatomy{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:56px}
 .decision-anatomy article{padding:25px;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.08)}
 .decision-anatomy article>span{font-size:10px;color:#45dcff;font-weight:800;letter-spacing:.12em}
 .decision-anatomy strong{display:block;margin-top:26px;color:#fff;font-size:18px}
