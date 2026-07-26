@@ -7,17 +7,24 @@
 .advisor-cinematic-copy .eyebrow{color:#91a4b6}
 .advisor-cinematic-copy h1{font-size:clamp(68px,9.5vw,142px);line-height:.89;letter-spacing:-.072em;margin:18px 0 34px;max-width:1150px;color:#fff}
 .advisor-cinematic-copy h1 span{color:#9bb0e4}
-.advisor-cinematic-copy .hero-lede{color:#afbac4;font-size:clamp(18px,2vw,24px);max-width:820px;line-height:1.65}
+.advisor-cinematic-copy .hero-lede{color:#afbac4;font-size:clamp(18px,2vw,24px);max-width:860px;line-height:1.65}
 .advisor-cinematic-copy .hero-actions{margin-top:34px}
 .advisor-cinematic-copy .button.secondary{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.045);color:#fff}
 .advisor-cinematic-orbit{position:absolute;width:min(70vw,900px);aspect-ratio:1;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-22%;bottom:-55%;box-shadow:0 0 0 90px rgba(255,255,255,.025),0 0 0 180px rgba(255,255,255,.018)}
 
-.advisor-picture-section{display:grid;grid-template-columns:.84fr 1.16fr;gap:90px;align-items:center;padding-top:135px;padding-bottom:135px}
-.advisor-picture-copy h2{font-size:clamp(50px,6.2vw,84px);line-height:.97;letter-spacing:-.058em;margin:18px 0 28px;max-width:760px}
-.advisor-picture-copy>p:last-of-type{font-size:18px;line-height:1.7;max-width:700px}
-.picture-context-list{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin-top:34px;border-top:1px solid var(--line)}
-.picture-context-list span{padding:15px 0;border-bottom:1px solid var(--line);font-size:12px;font-weight:750;color:#53606b}
+.advisor-problem-section{padding-top:140px;padding-bottom:140px}
+.problem-heading{max-width:980px}
+.problem-heading h2{font-size:clamp(54px,7vw,96px);line-height:.95;letter-spacing:-.062em;margin:18px 0 28px}
+.problem-heading>p:last-child{font-size:20px;line-height:1.7;max-width:820px;color:var(--muted)}
+.problem-points{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:78px;border-top:1px solid var(--line)}
+.problem-points article{padding-top:28px}
+.problem-points span{font-size:10px;font-weight:800;color:#68798a;letter-spacing:.12em}
+.problem-points h3{margin:42px 0 14px;font-size:25px;letter-spacing:-.035em}
+.problem-points p{font-size:15px;line-height:1.7;margin:0}
 
+.advisor-relationship-section{display:grid;grid-template-columns:.86fr 1.14fr;gap:90px;align-items:center;background:#eef2f7;padding-top:135px;padding-bottom:135px}
+.relationship-copy h2{font-size:clamp(50px,6.2vw,84px);line-height:.97;letter-spacing:-.058em;margin:18px 0 28px;max-width:760px}
+.relationship-copy>p:last-child{font-size:18px;line-height:1.7;max-width:700px}
 .relationship-rings{position:relative;min-height:610px;background:transparent}
 .relationship-ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;text-align:center}
 .community-ring{width:530px;height:530px;border:1px solid rgba(111,143,216,.42);background:rgba(111,143,216,.025);box-shadow:0 0 0 22px rgba(111,143,216,.012)}
@@ -29,7 +36,32 @@
 .relationship-center span{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#62718a}
 .relationship-center strong{font-size:17px;line-height:1.15;letter-spacing:-.03em}
 
-.advisor-coordination-section{display:grid;grid-template-columns:.86fr 1.14fr;gap:80px;align-items:center}
+.advisor-context-section{padding-top:130px;padding-bottom:130px}
+.context-heading{max-width:930px}
+.context-heading h2{max-width:900px}
+.context-heading>p:last-child{font-size:18px;line-height:1.7;max-width:760px}
+.context-map{display:grid;grid-template-columns:repeat(4,1fr);margin-top:70px;border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}
+.context-map article{min-height:220px;padding:26px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.context-map span{display:block;color:#9fafc2;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.11em}
+.context-map strong{display:block;margin-top:62px;color:#eef3f8;font-size:16px;line-height:1.5}
+
+.advisor-process-section{padding-top:140px;padding-bottom:140px}
+.advisor-process-section .section-heading{max-width:920px}
+.advisor-process-path{max-width:1000px;margin:74px auto 0;border-top:1px solid var(--line)}
+.advisor-process-path article{display:grid;grid-template-columns:90px 1fr;gap:40px;padding:34px 0;border-bottom:1px solid var(--line);align-items:start}
+.advisor-process-path>article>span{font-size:12px;font-weight:800;letter-spacing:.13em;color:#68798a;padding-top:8px}
+.advisor-process-path h3{margin:0 0 12px;font-size:31px;letter-spacing:-.04em}
+.advisor-process-path p{margin:0;max-width:760px;font-size:16px;line-height:1.7}
+
+.advisor-ownership-band{padding-top:130px;padding-bottom:130px}
+.advisor-ownership-band>p:not(.eyebrow){max-width:760px;font-size:18px;line-height:1.7}
+.ownership-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:58px}
+.ownership-grid article{padding:26px;border:1px solid rgba(255,255,255,.11);border-radius:20px;background:rgba(255,255,255,.045)}
+.ownership-grid span{display:block;color:#eef3f8;font-size:16px;font-weight:800;line-height:1.3}
+.ownership-grid small{display:inline-block;margin-top:28px;padding:6px 9px;border-radius:999px;background:rgba(155,176,228,.11);color:#9fafc2;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.ownership-grid strong{display:block;margin-top:14px;color:#cbd5e1;font-size:14px;line-height:1.6}
+
+.advisor-coordination-section{display:grid;grid-template-columns:.86fr 1.14fr;gap:80px;align-items:center;border-top:1px solid rgba(255,255,255,.07)}
 .coordination-copy h2{max-width:720px}
 .coordination-copy>p{max-width:720px;font-size:17px;line-height:1.7}
 .coordination-principles{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
@@ -37,46 +69,30 @@
 .specialist-network{position:relative;min-height:530px;background:transparent;overflow:visible}
 .network-orbit{position:absolute;left:50%;top:50%;width:365px;height:365px;border:1px dashed rgba(155,176,228,.23);border-radius:50%;transform:translate(-50%,-50%)}
 .network-line{position:absolute;left:50%;top:50%;width:370px;height:1px;transform-origin:center;background:linear-gradient(90deg,transparent,rgba(41,211,255,.25),transparent)}
-.line-one{transform:translate(-50%,-50%)}
-.line-two{transform:translate(-50%,-50%) rotate(45deg)}
-.line-three{transform:translate(-50%,-50%) rotate(90deg)}
-.line-four{transform:translate(-50%,-50%) rotate(135deg)}
+.line-one{transform:translate(-50%,-50%)}.line-two{transform:translate(-50%,-50%) rotate(45deg)}.line-three{transform:translate(-50%,-50%) rotate(90deg)}.line-four{transform:translate(-50%,-50%) rotate(135deg)}
 .network-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:170px;height:170px;padding:22px;border:1px solid rgba(41,211,255,.55);border-radius:30px;background:linear-gradient(145deg,#112a48,#071222);box-shadow:0 0 45px rgba(41,211,255,.15);text-align:center;z-index:3}
-.network-center small{color:#dbe6f1;font-size:12px;font-weight:750}
-.network-center strong{color:#45dcff;font-size:27px;letter-spacing:-.04em}
-.network-center span{color:#8193a7;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.network-center small{color:#dbe6f1;font-size:12px;font-weight:750}.network-center strong{color:#45dcff;font-size:27px;letter-spacing:-.04em}.network-center span{color:#8193a7;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .specialist-node{position:absolute;z-index:2;min-width:118px;padding:13px 15px;border:1px solid rgba(155,176,228,.28);border-radius:16px;background:#101e32;color:#eef4fb;font-size:11px;font-weight:750;text-align:center;box-shadow:0 12px 26px rgba(0,0,0,.16)}
 .node-cpa{left:8%;top:9%}.node-attorney{right:7%;top:9%}.node-trustee{left:2%;top:43%}.node-insurance{right:1%;top:43%}.node-banker{left:10%;bottom:9%}.node-custodian{left:50%;bottom:2%;transform:translateX(-50%)}.node-managers{right:7%;bottom:9%}
 
-.advisor-role-section .section-heading{max-width:900px}
-.advisor-role-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:56px}
-.advisor-role-card{position:relative;grid-column:span 2;min-height:300px;padding:28px;border:1px solid rgba(255,255,255,.8);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.93),rgba(246,249,253,.66));box-shadow:var(--shadow-sm),inset 0 1px 0 #fff;overflow:hidden}
-.advisor-role-card:nth-child(n+4){grid-column:span 3}
-.advisor-role-card>span{font-size:10px;font-weight:800;color:#65748c}
-.advisor-role-card h3{margin:68px 0 15px}
-.advisor-role-card p{margin:0;font-size:14px}
-.advisor-role-card:after{content:attr(data-step);position:absolute;right:18px;bottom:-18px;font-size:92px;font-weight:800;color:rgba(91,108,255,.05)}
-.independence-band h2{max-width:850px}
-.independence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
-.independence-grid article{padding:24px;border:1px solid rgba(255,255,255,.10);border-radius:18px;background:rgba(255,255,255,.045)}
-.independence-grid span{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.11em;color:#9fafc2}
-.independence-grid strong{display:block;margin-top:24px;color:#eef3f8;font-size:15px;line-height:1.5}
-.advisor-ownership-band+.independence-band{border-top:1px solid rgba(255,255,255,.06)}
-.advisor-infrastructure-panel{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:center;padding:44px;border-radius:28px;background:linear-gradient(145deg,#08111f,#13243d);box-shadow:var(--shadow-lg);color:#fff}
-.advisor-infrastructure-panel h2{margin-top:16px}
-.advisor-infrastructure-panel p{color:#b4c0cf}
-.advisor-infrastructure-panel .button{margin-top:22px}
-.infrastructure-list{display:flex;flex-direction:column}
-.infrastructure-list span{padding:17px 0;border-top:1px solid rgba(255,255,255,.10);font-size:14px;font-weight:750;color:#dbe4ee}
-.infrastructure-list span:last-child{border-bottom:1px solid rgba(255,255,255,.10)}
+.advisor-independence-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:start;padding-top:135px;padding-bottom:135px}
+.independence-statement h2{font-size:clamp(50px,6vw,82px);line-height:.97;letter-spacing:-.058em;margin:18px 0 28px}
+.independence-statement>p:last-child{font-size:18px;line-height:1.7;max-width:620px}
+.trust-principles{border-top:1px solid var(--line)}
+.trust-principles article{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:210px 1fr;gap:32px}
+.trust-principles span{font-size:13px;font-weight:800;color:var(--navy)}
+.trust-principles p{margin:0;font-size:15px;line-height:1.7}
+
+.advisor-infrastructure-section{padding-top:120px;padding-bottom:140px;background:#eef2f7}
+.advisor-infrastructure-panel{display:grid;grid-template-columns:1fr .7fr;gap:70px;align-items:center;padding:52px;border-radius:30px;background:linear-gradient(145deg,#08111f,#13243d);box-shadow:var(--shadow-lg);color:#fff}
+.advisor-infrastructure-panel h2{margin-top:16px}.advisor-infrastructure-panel p{color:#b4c0cf;font-size:17px;line-height:1.7}.infrastructure-list{display:flex;flex-direction:column}.infrastructure-list span{padding:17px 0;border-top:1px solid rgba(255,255,255,.10);font-size:14px;font-weight:750;color:#dbe4ee}.infrastructure-list span:last-child{border-bottom:1px solid rgba(255,255,255,.10)}
 
 @media(max-width:1000px){
-  .advisor-picture-section,.advisor-coordination-section{grid-template-columns:1fr;gap:54px}
+  .advisor-relationship-section,.advisor-coordination-section,.advisor-independence-section{grid-template-columns:1fr;gap:54px}
+  .problem-points,.ownership-grid{grid-template-columns:1fr}
+  .context-map{grid-template-columns:1fr 1fr}
   .relationship-rings{width:min(100%,680px);margin:auto}
   .specialist-network{width:min(100%,700px);margin:auto}
-  .advisor-role-grid{grid-template-columns:1fr 1fr}
-  .advisor-role-card,.advisor-role-card:nth-child(n+4){grid-column:auto}
-  .independence-grid{grid-template-columns:1fr}
   .advisor-infrastructure-panel{grid-template-columns:1fr;gap:34px}
 }
 @media(max-width:900px){
@@ -88,21 +104,17 @@
   .advisor-cinematic-copy h1{font-size:clamp(54px,16vw,76px)}
   .advisor-cinematic-copy .hero-lede{font-size:16px}
   .advisor-cinematic-copy .hero-actions{align-items:flex-start;flex-direction:column}
-  .advisor-picture-section{padding-top:90px;padding-bottom:90px}
-  .picture-context-list{grid-template-columns:1fr}
+  .advisor-problem-section,.advisor-relationship-section,.advisor-process-section,.advisor-independence-section{padding-top:90px;padding-bottom:90px}
+  .problem-heading>p:last-child{font-size:17px}
+  .problem-points{margin-top:50px}
   .relationship-rings{min-height:430px}
-  .community-ring{width:370px;height:370px}
-  .peers-ring{width:280px;height:280px}
-  .advisor-ring{width:195px;height:195px}
-  .relationship-center{width:108px;height:108px;padding:13px}
-  .relationship-center strong{font-size:14px}
-  .ring-label{top:13px;font-size:10px}
-  .relationship-ring>small{bottom:15px;font-size:8px}
-  .specialist-network{min-height:0;padding:24px 0}
-  .network-orbit,.network-line{display:none}
+  .community-ring{width:370px;height:370px}.peers-ring{width:280px;height:280px}.advisor-ring{width:195px;height:195px}
+  .relationship-center{width:108px;height:108px;padding:13px}.relationship-center strong{font-size:14px}.ring-label{top:13px;font-size:10px}.relationship-ring>small{bottom:15px;font-size:8px}
+  .context-map{grid-template-columns:1fr}.context-map article{min-height:170px}.context-map strong{margin-top:38px}
+  .advisor-process-path article{grid-template-columns:54px 1fr;gap:18px}.advisor-process-path h3{font-size:25px}
+  .specialist-network{min-height:0;padding:24px 0}.network-orbit,.network-line{display:none}
   .network-center{position:relative;left:auto;top:auto;transform:none;width:160px;height:130px;margin:0 auto 20px}
   .specialist-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;display:block;margin:9px 0;min-width:0}
-  .advisor-role-grid{grid-template-columns:1fr}
-  .advisor-role-card{min-height:260px}
+  .trust-principles article{grid-template-columns:1fr;gap:10px}
   .advisor-infrastructure-panel{padding:28px}
 }
