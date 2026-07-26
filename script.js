@@ -54,8 +54,7 @@ if(main&&!main.id)main.id='main-content';
 const headerLinks=[
   ['Advisor','advisor.html'],
   ['Peers','peer-councils.html'],
-  ['Community','collective-intelligence.html'],
-  ['How It Works','how-membership-works.html']
+  ['Community','collective-intelligence.html']
 ];
 
 const footerLinks=[
@@ -107,7 +106,7 @@ function renderSharedHeader(){
   nav.setAttribute('aria-label','Primary navigation');
   nav.replaceChildren(...headerLinks.map(([label,href])=>createNavLink(label,href)));
 
-  const apply=createNavLink('Apply',currentPage==='apply.html'?'#application':'apply.html','nav-cta');
+  const apply=createNavLink('Founding 12',currentPage==='apply.html'?'#application':'apply.html','nav-cta');
   if(currentPage==='apply.html'){
     apply.classList.add('is-active');
     apply.setAttribute('aria-current','page');
@@ -178,7 +177,7 @@ if(applicationForm){
     const data=new FormData(applicationForm);
     const complexities=data.getAll('complexity').join(', ')||'Not specified';
     const lines=[
-      `${COMPANY_NAME} — Founding Membership Inquiry`,'',
+      `${COMPANY_NAME} — Founding 12 Inquiry`,'',
       `Name: ${data.get('firstName')} ${data.get('lastName')}`,
       `Email: ${data.get('email')}`,
       `Phone: ${data.get('phone')||'Not provided'}`,
@@ -186,15 +185,12 @@ if(applicationForm){
       `Family profile: ${data.get('familyProfile')}`,
       `Investable assets: ${data.get('investableAssets')}`,
       `Relevant complexity: ${complexities}`,'',
-      'What feels fragmented or difficult:',data.get('challenge'),'',
-      'What would make syndicateIQ valuable:',data.get('value'),'',
-      'Potential contribution:',data.get('contribution'),'',
-      'Why the founding cohort appeals:',data.get('foundingAppeal'),'',
+      'What feels fragmented:',data.get('challenge'),'','What would create value:',data.get('value'),'','Potential contribution:',data.get('contribution'),'','Why the founding cohort appeals:',data.get('foundingAppeal'),'',
       `Referral source: ${data.get('referral')||'Not provided'}`,
       `Timing: ${data.get('timing')}`,
       `Open to a two-year founding commitment: ${data.get('commitment')}`
     ];
-    const subject=encodeURIComponent(`${COMPANY_NAME} Founding Membership Inquiry — ${data.get('firstName')} ${data.get('lastName')}`);
+    const subject=encodeURIComponent(`${COMPANY_NAME} Founding 12 Inquiry — ${data.get('firstName')} ${data.get('lastName')}`);
     const body=encodeURIComponent(lines.join('\n'));
     if(status){
       status.textContent='Opening your email inquiry for review…';
