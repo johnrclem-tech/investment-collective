@@ -84,3 +84,47 @@ h3,
   line-height:1.12!important;
   letter-spacing:-.035em!important;
 }
+
+/* Full-bleed editorial bands with content aligned to the shared site grid. */
+.community-reach-section,
+.advisor-application-section,
+.assembly-section,
+.meeting-flow-section,
+.advisor-relationship-section,
+.advisor-infrastructure-section{
+  width:100vw!important;
+  max-width:none!important;
+  margin-left:calc(50% - 50vw)!important;
+  margin-right:calc(50% - 50vw)!important;
+  padding-left:max(24px,calc((100vw - 1180px)/2))!important;
+  padding-right:max(24px,calc((100vw - 1180px)/2))!important;
+}
+
+/* Supporting infrastructure should read as an editorial section, not a card. */
+.advisor-infrastructure-panel{
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:var(--ink)!important;
+}
+.advisor-infrastructure-panel p{
+  color:var(--muted)!important;
+}
+.advisor-infrastructure-panel .infrastructure-list span{
+  color:var(--ink)!important;
+  border-color:var(--line)!important;
+}
+
+@media(max-width:680px){
+  .community-reach-section,
+  .advisor-application-section,
+  .assembly-section,
+  .meeting-flow-section,
+  .advisor-relationship-section,
+  .advisor-infrastructure-section{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+}
