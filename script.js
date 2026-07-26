@@ -3,15 +3,10 @@ layoutStyles.rel='stylesheet';
 layoutStyles.href='site-footer.css';
 document.head.appendChild(layoutStyles);
 
-const designStyles=document.createElement('link');
-designStyles.rel='stylesheet';
-designStyles.href='design-system.css';
-document.head.appendChild(designStyles);
-
-const typographyStyles=document.createElement('link');
-typographyStyles.rel='stylesheet';
-typographyStyles.href='typography.css';
-document.head.appendChild(typographyStyles);
+const coreStyles=document.createElement('link');
+coreStyles.rel='stylesheet';
+coreStyles.href='core.css';
+document.head.appendChild(coreStyles);
 
 const COMPANY_NAME='syndicateIQ';
 const LEGACY_COMPANY_NAME='Investment Collective';
