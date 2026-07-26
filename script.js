@@ -106,7 +106,7 @@ function renderSharedHeader(){
   nav.setAttribute('aria-label','Primary navigation');
   nav.replaceChildren(...headerLinks.map(([label,href])=>createNavLink(label,href)));
 
-  const apply=createNavLink('Founding 12',currentPage==='apply.html'?'#application':'apply.html','nav-cta');
+  const apply=createNavLink('Apply',currentPage==='apply.html'?'#application':'apply.html','nav-cta');
   if(currentPage==='apply.html'){
     apply.classList.add('is-active');
     apply.setAttribute('aria-current','page');
