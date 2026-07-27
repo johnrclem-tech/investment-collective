@@ -31,7 +31,7 @@
 .peers-ring{width:395px;height:395px;border:1px solid rgba(124,92,255,.38);background:rgba(124,92,255,.035)}
 .advisor-ring{width:265px;height:265px;border:1px solid rgba(38,159,191,.52);background:rgba(41,211,255,.04);box-shadow:0 0 45px rgba(41,211,255,.05)}
 .ring-label{position:absolute;top:20px;left:50%;transform:translateX(-50%);color:var(--navy);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
-.relationship-ring>small{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#68798a;font-size:10px;white-space:nowrap}
+.relationship-ring>small{position:absolute;top:43px;bottom:auto;left:50%;transform:translateX(-50%);color:#68798a;font-size:10px;line-height:1.35;white-space:nowrap}
 .relationship-center{display:grid;place-items:center;width:138px;height:138px;padding:18px;border-radius:50%;background:linear-gradient(145deg,#fff,#e8eefc);box-shadow:0 20px 48px rgba(15,23,42,.14);color:var(--navy)}
 .relationship-center span{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#62718a}
 .relationship-center strong{font-size:17px;line-height:1.15;letter-spacing:-.03em}
@@ -109,12 +109,12 @@
   .problem-points{margin-top:50px}
   .relationship-rings{min-height:430px}
   .community-ring{width:370px;height:370px}.peers-ring{width:280px;height:280px}.advisor-ring{width:195px;height:195px}
-  .relationship-center{width:108px;height:108px;padding:13px}.relationship-center strong{font-size:14px}.ring-label{top:13px;font-size:10px}.relationship-ring>small{bottom:15px;font-size:8px}
+  .relationship-center{width:108px;height:108px;padding:13px}.relationship-center strong{font-size:14px}.ring-label{top:13px;font-size:10px}.relationship-ring>small{top:31px;bottom:auto;font-size:8px}
   .context-map{grid-template-columns:1fr}.context-map article{min-height:170px}.context-map strong{margin-top:38px}
   .advisor-process-path article{grid-template-columns:54px 1fr;gap:18px}.advisor-process-path h3{font-size:25px}
   .specialist-network{min-height:0;padding:24px 0}.network-orbit,.network-line{display:none}
   .network-center{position:relative;left:auto;top:auto;transform:none;width:160px;height:130px;margin:0 auto 20px}
   .specialist-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;display:block;margin:9px 0;min-width:0}
   .trust-principles article{grid-template-columns:1fr;gap:10px}
-  .advisor-infrastructure-panel{padding:28px}
+  .advisor-infrastructure-panel{padding:30px}
 }
