@@ -10,6 +10,7 @@ document.head.appendChild(coreStyles);
 
 const COMPANY_NAME='syndicateIQ';
 const LEGACY_COMPANY_NAME='Investment Collective';
+const SECTION_NAMES={Advisor:'The Advisor',Peers:'The Council',Community:'The Community'};
 
 function applyCompanyName(){
   if(document.title.includes(LEGACY_COMPANY_NAME)){
@@ -40,23 +41,46 @@ function applyCompanyName(){
   });
 }
 
+function applySectionNames(){
+  Object.entries(SECTION_NAMES).forEach(([oldName,newName])=>{
+    if(document.title===`${oldName} — ${COMPANY_NAME}`)document.title=`${newName} — ${COMPANY_NAME}`;
+  });
+
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      const parent=node.parentElement;
+      if(!parent||['SCRIPT','STYLE','NOSCRIPT'].includes(parent.tagName))return NodeFilter.FILTER_REJECT;
+      return SECTION_NAMES[node.nodeValue.trim()]?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+    }
+  });
+
+  const textNodes=[];
+  while(walker.nextNode())textNodes.push(walker.currentNode);
+  textNodes.forEach(node=>{
+    const leading=node.nodeValue.match(/^\s*/)?.[0]||'';
+    const trailing=node.nodeValue.match(/\s*$/)?.[0]||'';
+    node.nodeValue=`${leading}${SECTION_NAMES[node.nodeValue.trim()]}${trailing}`;
+  });
+}
+
 applyCompanyName();
+applySectionNames();
 
 const currentPage=window.location.pathname.split('/').pop()||'index.html';
 const main=document.querySelector('main');
 if(main&&!main.id)main.id='main-content';
 
 const headerLinks=[
-  ['Advisor','advisor.html'],
-  ['Peers','peer-councils.html'],
-  ['Community','collective-intelligence.html']
+  ['The Advisor','advisor.html'],
+  ['The Council','peer-councils.html'],
+  ['The Community','collective-intelligence.html']
 ];
 
 const footerLinks=[
   ['Home','index.html'],
-  ['Advisor','advisor.html'],
-  ['Peers','peer-councils.html'],
-  ['Community','collective-intelligence.html'],
+  ['The Advisor','advisor.html'],
+  ['The Council','peer-councils.html'],
+  ['The Community','collective-intelligence.html'],
   ['How It Works','how-membership-works.html'],
   ['One Decision','one-decision.html'],
   ['Allocation Insights','allocation-insights.html'],
