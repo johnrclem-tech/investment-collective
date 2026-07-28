@@ -7,7 +7,24 @@
   <meta name="description" content="A private community that preserves relevant member experience, surfaces who has lived the question, and creates permissioned connections when firsthand perspective can improve an important family decision.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="advisor.css">
-  <style>@media(min-width:1001px){.community-page .advisor-relationship-section{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}}</style>
+  <link rel="stylesheet" href="advisor-dashboard.css">
+  <style>
+    @media(min-width:1001px){.community-page .advisor-relationship-section{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}}
+    .community-page .community-platform-app .software-metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .community-page .community-platform-app .software-dashboard-grid{grid-template-columns:1.15fr .85fr}
+    .community-page .community-platform-app .community-search-card{grid-column:1/-1;padding:18px}
+    .community-page .community-platform-app .community-search{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #dce3ec;border-radius:11px;background:#f8fafc;color:#718096;font-size:10px}
+    .community-page .community-platform-app .community-search strong{margin-left:auto;padding:7px 10px;border-radius:8px;background:#183867;color:#fff;font-size:8px;letter-spacing:.04em;text-transform:uppercase}
+    .community-page .community-platform-app .community-topic-card{min-height:240px}
+    .community-page .community-platform-app .community-topic-card.wide{grid-column:1/-1;min-height:0}
+    .community-page .community-platform-app .topic-meta{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0 5px}
+    .community-page .community-platform-app .topic-meta span{padding:5px 7px;border-radius:999px;background:#eef3f8;color:#617086;font-size:7px;font-weight:750;text-transform:none;letter-spacing:0}
+    .community-page .community-platform-app .software-card-head strong{font-size:14px;line-height:1.25}
+    .community-page .community-platform-app .software-rows b{font-size:8.5px}
+    .community-page .community-platform-app .software-rows small{font-size:7.5px}
+    @media(max-width:1180px){.community-page .community-platform-app .software-metrics{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){.community-page .community-platform-app .software-metrics,.community-page .community-platform-app .software-dashboard-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body class="advisor-page community-page">
   <header class="site-header"></header>
@@ -96,6 +113,96 @@
         <article class="reveal"><span>04</span><div><h3>Request a connection</h3><p>When a direct conversation would add value, the contributing member decides whether to accept the introduction.</p></div></article>
         <article class="reveal"><span>05</span><div><h3>Apply the family’s context</h3><p>The Advisor separates recurring signal from anecdote and connects the experience to the family’s own priorities and constraints.</p></div></article>
         <article class="reveal"><span>06</span><div><h3>Preserve what follows</h3><p>The family’s reasoning, decision, outcome, and lessons become part of the Community only at the level it permits.</p></div></article>
+      </div>
+    </section>
+
+    <section class="advisor-software-section">
+      <div class="software-section-heading reveal">
+        <p class="eyebrow">The platform</p>
+        <h2>One place to find the experience behind the question.</h2>
+        <p>syndicateIQ organizes member questions, documented decisions, outcomes, lessons, and permissioned connections so relevant experience can be found without turning the Community into a marketplace or a popularity contest.</p>
+      </div>
+
+      <div class="software-app community-platform-app reveal" aria-label="syndicateIQ Community landing page with searchable member topics">
+        <aside class="software-sidebar">
+          <div class="software-brand">syndicate<span>IQ</span></div>
+          <nav aria-label="Software preview navigation">
+            <div class="software-nav-primary">
+              <span class="software-nav-item">Dashboard</span>
+              <span class="software-nav-item">Net Worth</span>
+              <span class="software-nav-item">Cash Flow</span>
+              <span class="software-nav-item">Tasks</span>
+              <span class="software-nav-item">The Council</span>
+              <span class="software-nav-item active">The Community</span>
+            </div>
+            <div class="software-nav-group">
+              <strong>Investments</strong>
+              <span class="software-nav-item">Public</span>
+              <span class="software-nav-item">Private</span>
+              <span class="software-nav-item">Retirement</span>
+              <span class="software-nav-item">Education</span>
+              <span class="software-nav-item">Philanthropy</span>
+              <span class="software-nav-item">All Activity</span>
+            </div>
+            <div class="software-nav-group">
+              <strong>Expenses</strong>
+              <span class="software-nav-item">Transactions</span>
+              <span class="software-nav-item">Merchants</span>
+              <span class="software-nav-item">Categories</span>
+            </div>
+            <div class="software-nav-group">
+              <strong>Planning &amp; Records</strong>
+              <span class="software-nav-item">Accounts</span>
+              <span class="software-nav-item">Beneficiaries</span>
+              <span class="software-nav-item">Taxes</span>
+            </div>
+          </nav>
+        </aside>
+
+        <div class="software-workspace">
+          <header class="software-topbar"><span>The Community</span><small>Private member network</small></header>
+          <div class="software-content">
+            <article class="software-card community-search-card">
+              <div class="community-search"><span>Search managers, advisers, structures, transactions, or family decisions</span><strong>Start a topic</strong></div>
+            </article>
+
+            <div class="software-metrics">
+              <article><span>Active topics</span><strong>28</strong><small>Across the Community</small></article>
+              <article><span>Documented decisions</span><strong>146</strong><small>With context preserved</small></article>
+              <article><span>Member experiences</span><strong>312</strong><small>Permission controlled</small></article>
+              <article><span>Introductions</span><strong>19</strong><small>Accepted this quarter</small></article>
+            </div>
+
+            <div class="software-dashboard-grid">
+              <article class="software-card community-topic-card">
+                <div class="software-card-head"><div><span>Active discussion</span><strong>How are families pacing new private commitments while distributions remain slow?</strong></div><small>12 replies</small></div>
+                <div class="topic-meta"><span>Private markets</span><span>Liquidity</span><span>Commitment pacing</span></div>
+                <div class="software-rows"><span><b>Former operator</b><small>Reduced 2026 commitment pace by 30%</small></span><span><b>Family allocator</b><small>Maintained pace with a larger cash reserve</small></span><span><b>Fund investor</b><small>Shifted toward shorter-duration strategies</small></span><span><b>Advisor synthesis</b><small>Three assumptions need comparison</small></span></div>
+              </article>
+
+              <article class="software-card community-topic-card">
+                <div class="software-card-head"><div><span>Recently active</span><strong>Topics members are exploring now</strong></div></div>
+                <div class="software-rows"><span><b>Evaluating a new outsourced CIO</b><small>8 experiences</small></span><span><b>Private aviation ownership structures</b><small>5 experiences</small></span><span><b>Concentrated stock hedging</b><small>11 experiences</small></span><span><b>Family foundation governance</b><small>6 experiences</small></span><span><b>Secondary sales of fund interests</b><small>9 experiences</small></span></div>
+              </article>
+
+              <article class="software-card community-topic-card wide">
+                <div class="software-card-head"><div><span>Browse by question</span><strong>Search the Community by what the family is deciding—not only by asset class.</strong></div><small>View all topics</small></div>
+                <div class="software-rows"><span><b>Managers &amp; advisers</b><small>Selection · diligence · fees · transitions</small></span><span><b>Investments &amp; structures</b><small>Funds · direct deals · credit · ownership</small></span><span><b>Liquidity &amp; transactions</b><small>Commitments · sales · borrowing · concentration</small></span><span><b>Family capital decisions</b><small>Trusts · governance · philanthropy · next generation</small></span></div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <aside class="software-alerts">
+          <div class="alerts-heading"><strong>Community activity</strong><span>6</span></div>
+          <div class="alert-list">
+            <article class="urgent"><i></i><div><strong>Three members accepted introductions</strong><span>Private commitment pacing</span></div></article>
+            <article class="warning"><i></i><div><strong>New firsthand experience added</strong><span>Outsourced CIO transition</span></div></article>
+            <article><i></i><div><strong>Advisor synthesis ready</strong><span>Concentrated stock hedging</span></div></article>
+            <article><i></i><div><strong>Outcome update posted</strong><span>Secondary fund sale</span></div></article>
+            <article><i></i><div><strong>New topic needs context</strong><span>Family foundation governance</span></div></article>
+          </div>
+        </aside>
       </div>
     </section>
 
