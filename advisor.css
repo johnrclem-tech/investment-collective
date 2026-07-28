@@ -61,19 +61,28 @@
 .ownership-grid small{display:inline-block;margin-top:28px;padding:6px 9px;border-radius:999px;background:rgba(155,176,228,.11);color:#9fafc2;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .ownership-grid strong{display:block;margin-top:14px;color:#cbd5e1;font-size:14px;line-height:1.6}
 
-.advisor-coordination-section{display:grid;grid-template-columns:.86fr 1.14fr;gap:80px;align-items:center;border-top:1px solid rgba(255,255,255,.07)}
-.coordination-copy h2{max-width:720px}
-.coordination-copy>p{max-width:720px;font-size:17px;line-height:1.7}
-.coordination-principles{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.coordination-principles span{padding:10px 14px;border:1px solid rgba(255,255,255,.13);border-radius:999px;color:#dce5ef;font-size:11px;font-weight:750}
-.specialist-network{position:relative;min-height:530px;background:transparent;overflow:visible}
-.network-orbit{position:absolute;left:50%;top:50%;width:365px;height:365px;border:1px dashed rgba(155,176,228,.23);border-radius:50%;transform:translate(-50%,-50%)}
-.network-line{position:absolute;left:50%;top:50%;width:370px;height:1px;transform-origin:center;background:linear-gradient(90deg,transparent,rgba(41,211,255,.25),transparent)}
-.line-one{transform:translate(-50%,-50%)}.line-two{transform:translate(-50%,-50%) rotate(45deg)}.line-three{transform:translate(-50%,-50%) rotate(90deg)}.line-four{transform:translate(-50%,-50%) rotate(135deg)}
-.network-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:170px;height:170px;padding:22px;border:1px solid rgba(41,211,255,.55);border-radius:30px;background:linear-gradient(145deg,#112a48,#071222);box-shadow:0 0 45px rgba(41,211,255,.15);text-align:center;z-index:3}
-.network-center small{color:#dbe6f1;font-size:12px;font-weight:750}.network-center strong{color:#45dcff;font-size:27px;letter-spacing:-.04em}.network-center span{color:#8193a7;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.specialist-node{position:absolute;z-index:2;min-width:118px;padding:13px 15px;border:1px solid rgba(155,176,228,.28);border-radius:16px;background:#101e32;color:#eef4fb;font-size:11px;font-weight:750;text-align:center;box-shadow:0 12px 26px rgba(0,0,0,.16)}
-.node-cpa{left:8%;top:9%}.node-attorney{right:7%;top:9%}.node-trustee{left:2%;top:43%}.node-insurance{right:1%;top:43%}.node-banker{left:10%;bottom:9%}.node-custodian{left:50%;bottom:2%;transform:translateX(-50%)}.node-managers{right:7%;bottom:9%}
+.advisor-coordination-section{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;border-top:1px solid rgba(255,255,255,.07);background:radial-gradient(circle at 78% 52%,rgba(69,220,255,.06),transparent 30%),#07101d}
+.coordination-copy{max-width:780px}
+.coordination-copy h2{max-width:780px}
+.coordination-copy>p{max-width:720px;font-size:18px;line-height:1.72;color:#b8c3cf}
+.team-map{position:relative;min-height:600px}
+.team-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:190px;height:190px;display:grid;place-items:center;padding:24px;border:1px solid rgba(69,220,255,.48);border-radius:30px;background:linear-gradient(145deg,#112a48,#071222);box-shadow:0 26px 60px rgba(0,0,0,.28),0 0 45px rgba(69,220,255,.10);text-align:center;z-index:3}
+.team-center small{color:#dbe6f1;font-size:12px;font-weight:750}
+.team-center strong{display:block;color:#45dcff;font-size:28px;letter-spacing:-.04em}
+.team-center span{display:block;color:#8193a7;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.team-node{position:absolute;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:120px;text-align:center;color:#eef4fb;font-size:12px;font-weight:750}
+.team-avatar{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#243b5b,#122034);border:1px solid rgba(255,255,255,.12);box-shadow:0 12px 28px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.06);color:#cfe8ff;font-size:13px;font-weight:800;letter-spacing:.05em}
+.team-node span{max-width:150px;line-height:1.25;color:#dce5ef}
+.node-managers{left:50%;top:2%;transform:translateX(-50%)}
+.node-attorney{right:10%;top:17%}
+.node-cpa{left:10%;top:20%}
+.node-trustee{right:3%;top:46%}
+.node-banker{left:3%;top:48%}
+.node-custodian{left:18%;bottom:4%}
+.node-insurance{right:15%;bottom:2%}
+.team-connectors{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:1;pointer-events:none}
+.team-connector{fill:none;stroke:url(#teamLineGradient);stroke-width:1.2;opacity:.78}
+.team-connector-dot{fill:#45dcff;opacity:.55}
 
 .advisor-independence-section{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:start;padding-top:135px;padding-bottom:135px}
 .independence-statement h2{font-size:clamp(50px,6vw,82px);line-height:.97;letter-spacing:-.058em;margin:18px 0 28px}
@@ -92,7 +101,7 @@
   .problem-points,.ownership-grid{grid-template-columns:1fr}
   .context-map{grid-template-columns:1fr 1fr}
   .relationship-rings{width:min(100%,680px);margin:auto}
-  .specialist-network{width:min(100%,700px);margin:auto}
+  .team-map{width:min(100%,760px);margin:auto}
   .advisor-infrastructure-panel{grid-template-columns:1fr;gap:34px}
 }
 @media(max-width:900px){
@@ -112,9 +121,11 @@
   .relationship-center{width:108px;height:108px;padding:13px}.relationship-center strong{font-size:14px}.ring-label{top:13px;font-size:10px}.relationship-ring>small{top:31px;bottom:auto;font-size:8px}
   .context-map{grid-template-columns:1fr}.context-map article{min-height:170px}.context-map strong{margin-top:38px}
   .advisor-process-path article{grid-template-columns:54px 1fr;gap:18px}.advisor-process-path h3{font-size:25px}
-  .specialist-network{min-height:0;padding:24px 0}.network-orbit,.network-line{display:none}
-  .network-center{position:relative;left:auto;top:auto;transform:none;width:160px;height:130px;margin:0 auto 20px}
-  .specialist-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;display:block;margin:9px 0;min-width:0}
+  .team-map{min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:24px 0}
+  .team-connectors{display:none}
+  .team-center,.team-node{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important}
+  .team-center{grid-column:1/-1;margin:0 auto 8px;width:180px;height:155px}
+  .team-node{min-width:0}
   .trust-principles article{grid-template-columns:1fr;gap:10px}
   .advisor-infrastructure-panel{padding:30px}
 }
