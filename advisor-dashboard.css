@@ -14,7 +14,23 @@
 .advisor-page .trust-principles span{display:block;margin:42px 0 14px;font-size:25px!important;font-weight:700!important;line-height:1.12!important;letter-spacing:-.035em!important;color:var(--ink)!important}
 .advisor-page .trust-principles p{margin:0!important;font-size:15px!important;line-height:1.7!important;color:var(--muted)!important}
 
-@media(max-width:1180px){.software-app{grid-template-columns:135px minmax(0,1fr)}.software-alerts{grid-column:1/-1;border-left:0;border-top:1px solid #e1e7ef}.alert-list{display:grid;grid-template-columns:repeat(3,1fr);gap:0 18px}.software-dashboard-grid{grid-template-columns:1fr 1fr}.net-worth-card{grid-column:1/-1}.liquidity-card{grid-column:1/-1}.software-metrics{grid-template-columns:repeat(3,1fr)}}
+/* Grouped software navigation and more readable alerts. */
+.advisor-page .software-app{grid-template-columns:178px minmax(0,1fr) 250px}
+.advisor-page .software-brand{padding-bottom:22px}
+.advisor-page .software-sidebar nav{gap:15px}
+.advisor-page .software-nav-primary,.advisor-page .software-nav-group{display:flex;flex-direction:column;gap:3px}
+.advisor-page .software-nav-group{padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+.advisor-page .software-nav-group>strong{padding:0 10px 7px;color:#698099;font-size:8px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.advisor-page .software-nav-item{display:block;padding:7px 10px;border-radius:8px;color:#afbed0;font-size:10px;font-weight:680;line-height:1.2;cursor:default;user-select:none}
+.advisor-page .software-nav-item.active{background:rgba(255,255,255,.1);color:#fff}
+.advisor-page .alerts-heading strong{font-size:15px;line-height:1.2}
+.advisor-page .alerts-heading span{width:22px;height:22px;font-size:9px}
+.advisor-page .alert-list article{gap:10px;padding:15px 0}
+.advisor-page .alert-list i{margin-top:4px}
+.advisor-page .alert-list strong{font-size:10px;line-height:1.4}
+.advisor-page .alert-list span{margin-top:4px;font-size:8.5px;line-height:1.4}
+
+@media(max-width:1180px){.software-app{grid-template-columns:135px minmax(0,1fr)}.software-alerts{grid-column:1/-1;border-left:0;border-top:1px solid #e1e7ef}.alert-list{display:grid;grid-template-columns:repeat(3,1fr);gap:0 18px}.software-dashboard-grid{grid-template-columns:1fr 1fr}.net-worth-card{grid-column:1/-1}.liquidity-card{grid-column:1/-1}.software-metrics{grid-template-columns:repeat(3,1fr)}.advisor-page .software-app{grid-template-columns:165px minmax(0,1fr)}}
 @media(max-width:1000px){.advisor-page .trust-principles{grid-template-columns:1fr!important}.advisor-page .trust-principles article{padding-top:28px!important}}
 @media(max-width:760px){.advisor-software-section{padding:95px 18px 110px}.software-section-heading{margin-bottom:42px}.software-section-heading>p:last-child{font-size:16px}.software-app{display:block;min-height:0;border-radius:20px}.software-sidebar{display:none}.software-topbar{padding:0 14px}.software-topbar small{display:none}.software-content{padding:12px}.software-metrics{grid-template-columns:1fr 1fr}.software-dashboard-grid{grid-template-columns:1fr}.net-worth-card,.liquidity-card{grid-column:auto}.allocation-content{grid-template-columns:100px 1fr}.allocation-donut{width:96px;height:96px}.software-alerts{padding:14px}.alert-list{grid-template-columns:1fr 1fr}.software-card{padding:13px}}
 @media(max-width:620px){.advisor-page .advisor-independence-section{padding-top:90px!important;padding-bottom:90px!important}.advisor-page .independence-statement>p:last-child{font-size:17px!important}.advisor-page .trust-principles{margin-top:50px!important}}
