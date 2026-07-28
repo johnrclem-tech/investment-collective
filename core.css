@@ -133,6 +133,33 @@ h3,
 .advisor-infrastructure-panel p{color:var(--muted)!important}
 .advisor-infrastructure-panel .infrastructure-list span{color:var(--ink)!important;border-color:var(--line)!important}
 
+/* Shared closing section used across the site. */
+.founding-stage{
+  min-height:760px;
+  padding:150px max(24px,calc((100vw - 1180px)/2));
+  background:radial-gradient(circle at 50% 60%,rgba(91,108,255,.18),transparent 34%),#07101d;
+  position:relative;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  color:#fff;
+}
+.founding-stage-copy{position:relative;z-index:3;max-width:900px}
+.founding-stage h2{
+  font-size:clamp(54px,7vw,96px)!important;
+  font-weight:720!important;
+  line-height:.96!important;
+  letter-spacing:-.06em!important;
+  margin:18px auto 28px;
+  color:#fff;
+}
+.founding-stage p:not(.eyebrow){max-width:720px;margin:0 auto 34px;color:#aebac8;font-size:18px;line-height:1.7}
+.founding-stage .eyebrow{color:#9fafc2}
+.founding-formation{position:absolute;width:620px;height:620px;border:1px solid rgba(255,255,255,.06);border-radius:50%}
+.founding-formation span{position:absolute;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.17);box-shadow:0 0 0 10px rgba(255,255,255,.025)}
+.founding-formation span:nth-child(1){left:50%;top:4%}.founding-formation span:nth-child(2){right:24%;top:10%}.founding-formation span:nth-child(3){right:8%;top:27%}.founding-formation span:nth-child(4){right:4%;top:50%}.founding-formation span:nth-child(5){right:12%;bottom:22%}.founding-formation span:nth-child(6){right:31%;bottom:7%}.founding-formation span:nth-child(7){left:50%;bottom:3%}.founding-formation span:nth-child(8){left:31%;bottom:7%}.founding-formation span:nth-child(9){left:12%;bottom:22%}.founding-formation span:nth-child(10){left:4%;top:50%}.founding-formation span:nth-child(11){left:8%;top:27%}.founding-formation span:nth-child(12){left:24%;top:10%}
+
 @media(max-width:680px){
   .community-reach-section,
   .advisor-application-section,
@@ -143,4 +170,8 @@ h3,
     padding-left:18px!important;
     padding-right:18px!important;
   }
+  .founding-stage{padding:100px 18px}
+  .founding-stage h2{font-size:clamp(44px,13vw,62px)!important}
+  .founding-stage p:not(.eyebrow){font-size:16px}
+  .founding-formation{width:390px;height:390px}
 }
