@@ -133,6 +133,23 @@ h3,
 .advisor-infrastructure-panel p{color:var(--muted)!important}
 .advisor-infrastructure-panel .infrastructure-list span{color:var(--ink)!important;border-color:var(--line)!important}
 
+/* Match the family center to the relationship labels around it. */
+.advisor-page .relationship-center span{
+  color:var(--navy)!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  line-height:1.2!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+}
+.advisor-page .relationship-center strong{
+  color:#68798a!important;
+  font-size:10px!important;
+  font-weight:400!important;
+  line-height:1.35!important;
+  letter-spacing:0!important;
+}
+
 /* Shared closing section used across the site. */
 .founding-stage{
   min-height:760px;
@@ -170,6 +187,8 @@ h3,
     padding-left:18px!important;
     padding-right:18px!important;
   }
+  .advisor-page .relationship-center span{font-size:10px!important}
+  .advisor-page .relationship-center strong{font-size:8px!important}
   .founding-stage{padding:100px 18px}
   .founding-stage h2{font-size:clamp(44px,13vw,62px)!important}
   .founding-stage p:not(.eyebrow){font-size:16px}
