@@ -7,6 +7,7 @@
   <meta name="description" content="One independent advisor who understands the complete family picture, frames important decisions, coordinates specialists, and stays accountable for follow-through.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="advisor.css">
+  <link rel="stylesheet" href="advisor-dashboard.css">
 </head>
 <body class="advisor-page">
   <header class="site-header"></header>
@@ -124,20 +125,80 @@
       </div>
     </section>
 
-    <section class="editorial-section advisor-infrastructure-section">
-      <div class="advisor-infrastructure-panel reveal">
-        <div>
-          <p class="eyebrow">Supporting infrastructure</p>
-          <h2>The infrastructure behind better advice.</h2>
-          <p>The Investment Office keeps the family’s balance sheet, ownership, documents, liquidity, commitments, decisions, and open actions connected—so the advisor can focus on judgment rather than information gathering.</p>
+    <section class="advisor-software-section">
+      <div class="software-section-heading reveal">
+        <p class="eyebrow">Supporting technology</p>
+        <h2>One platform keeps the whole family picture current.</h2>
+        <p>syndicateIQ connects the family’s balance sheet, allocation, liquidity, commitments, trusts, taxes, documents, decisions, and open actions in one living system—so the advisor can spend less time assembling information and more time exercising judgment.</p>
+      </div>
+
+      <div class="software-app reveal" aria-label="syndicateIQ family capital dashboard for a family with approximately fifty million dollars in net worth">
+        <aside class="software-sidebar">
+          <div class="software-brand">syndicate<span>IQ</span></div>
+          <nav>
+            <a class="active" href="#">Dashboard</a><a href="#">Net Worth</a><a href="#">Allocation</a><a href="#">Liquidity</a><a href="#">Commitments</a><a href="#">Trusts &amp; Entities</a><a href="#">Taxes</a><a href="#">Documents</a><a href="#">Decisions</a><a href="#">Tasks</a>
+          </nav>
+          <div class="software-family"><strong>Anderson Family</strong><span>Multi-generational view</span></div>
+        </aside>
+
+        <div class="software-workspace">
+          <header class="software-topbar"><span>Family Capital Dashboard</span><small>Updated today at 8:42 AM</small></header>
+          <div class="software-content">
+            <div class="software-metrics">
+              <article><span>Net worth</span><strong>$50.2M</strong><small class="positive">↑ 5.6% QoQ</small></article>
+              <article><span>Liquid assets</span><strong>$8.4M</strong><small>16.7% of net worth</small></article>
+              <article><span>Private commitments</span><strong>$12.7M</strong><small>25.3% of net worth</small></article>
+              <article><span>Tax exposure</span><strong>$1.3M</strong><small>Next 12 months</small></article>
+              <article><span>Upcoming decisions</span><strong>4</strong><small>Require attention</small></article>
+            </div>
+
+            <div class="software-dashboard-grid">
+              <article class="software-card net-worth-card">
+                <div class="software-card-head"><div><span>Net worth over time</span><strong>$50.2M</strong></div><small>Since inception</small></div>
+                <div class="net-worth-chart" aria-hidden="true"><span class="chart-line"></span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="chart-axis"><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span></div>
+              </article>
+
+              <article class="software-card allocation-card">
+                <div class="software-card-head"><div><span>Asset allocation</span><strong>Total portfolio</strong></div></div>
+                <div class="allocation-content"><div class="allocation-donut"><span>$50.2M<small>Total</small></span></div><div class="allocation-legend"><span><i></i>Public equities <b>34%</b></span><span><i></i>Private equity <b>25%</b></span><span><i></i>Real estate <b>16%</b></span><span><i></i>Fixed income <b>10%</b></span><span><i></i>Other <b>15%</b></span></div></div>
+              </article>
+
+              <article class="software-card liquidity-card">
+                <div class="software-card-head"><div><span>Liquidity runway</span><strong>26 months</strong></div><small>Base case</small></div>
+                <div class="liquidity-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="liquidity-threshold">Minimum liquidity threshold</div>
+              </article>
+
+              <article class="software-card commitments-card">
+                <div class="software-card-head"><div><span>Upcoming capital calls</span><strong>$3.2M due</strong></div></div>
+                <div class="software-rows"><span><b>Pioneer Growth Fund IV</b><small>May 30 · $1.25M</small></span><span><b>Summit Buyout Fund V</b><small>Jun 6 · $850K</small></span><span><b>Latitude Infrastructure</b><small>Jun 20 · $650K</small></span><span><b>Nexus Venture Partners IX</b><small>Jul 8 · $425K</small></span></div>
+              </article>
+
+              <article class="software-card entities-card">
+                <div class="software-card-head"><div><span>Trusts &amp; entities</span><strong>4 structures</strong></div></div>
+                <div class="software-rows"><span><b>Family Trust</b><small>$28.4M · 5 members</small></span><span><b>Dynasty Trust</b><small>$12.7M · 6 members</small></span><span><b>Holdings LLC</b><small>$6.1M · 100% owned</small></span><span><b>Family Foundation</b><small>$2.3M · Board of 3</small></span></div>
+              </article>
+
+              <article class="software-card decisions-card">
+                <div class="software-card-head"><div><span>Decision briefs</span><strong>3 ready</strong></div></div>
+                <div class="software-rows"><span><b>Private equity exposure review</b><small class="ready">Ready</small></span><span><b>Real estate allocation proposal</b><small class="ready">Ready</small></span><span><b>Q2 family meeting brief</b><small class="ready">Ready</small></span><span><b>Next-gen education planning</b><small>In progress</small></span></div>
+              </article>
+            </div>
+          </div>
         </div>
-        <div class="infrastructure-list">
-          <span>Complete family balance sheet</span>
-          <span>Allocation and liquidity insights</span>
-          <span>Upcoming decisions and obligations</span>
-          <span>Connected trusts, entities, and documents</span>
-          <span>Decision history and follow-through</span>
-        </div>
+
+        <aside class="software-alerts">
+          <div class="alerts-heading"><strong>Alerts &amp; notifications</strong><span>8</span></div>
+          <div class="alert-list">
+            <article class="urgent"><i></i><div><strong>Capital call due in 14 days</strong><span>Pioneer Growth Fund IV</span></div></article>
+            <article class="warning"><i></i><div><strong>Estimated tax payment approaching</strong><span>$675K due June 15</span></div></article>
+            <article><i></i><div><strong>Private equity above target</strong><span>25.3% vs. 15–20% target</span></div></article>
+            <article><i></i><div><strong>Trust distribution review</strong><span>Family Trust requires attention</span></div></article>
+            <article><i></i><div><strong>Umbrella policy renewal</strong><span>Expires July 1</span></div></article>
+            <article><i></i><div><strong>Decision brief ready</strong><span>Q2 family meeting</span></div></article>
+          </div>
+        </aside>
       </div>
     </section>
 
