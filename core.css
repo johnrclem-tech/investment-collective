@@ -150,6 +150,32 @@ h3,
   letter-spacing:0!important;
 }
 
+/* Give the existing-team narrative more room and tighten the specialist network. */
+.advisor-page .advisor-coordination-section{
+  grid-template-columns:minmax(0,1.28fr) minmax(360px,.72fr)!important;
+  gap:48px!important;
+}
+.advisor-page .coordination-copy h2{max-width:900px!important}
+.advisor-page .coordination-copy>p{max-width:790px!important}
+.advisor-page .coordination-principles{display:none!important}
+.advisor-page .specialist-network{
+  width:100%!important;
+  max-width:500px!important;
+  min-height:470px!important;
+  margin-left:auto!important;
+}
+.advisor-page .network-orbit{width:310px!important;height:310px!important}
+.advisor-page .network-line{width:320px!important}
+.advisor-page .network-center{width:155px!important;height:155px!important;padding:20px!important}
+.advisor-page .specialist-node{min-width:104px!important;padding:12px 14px!important}
+.advisor-page .node-managers{left:50%!important;right:auto!important;top:0!important;bottom:auto!important;transform:translateX(-50%)!important}
+.advisor-page .node-insurance{left:50%!important;right:auto!important;top:auto!important;bottom:0!important;transform:translateX(-50%)!important}
+.advisor-page .node-cpa{left:3%!important;right:auto!important;top:46%!important;bottom:auto!important}
+.advisor-page .node-banker{left:auto!important;right:3%!important;top:46%!important;bottom:auto!important}
+.advisor-page .node-trustee{left:12%!important;right:auto!important;top:22%!important;bottom:auto!important}
+.advisor-page .node-custodian{left:auto!important;right:12%!important;top:22%!important;bottom:auto!important;transform:none!important}
+.advisor-page .node-attorney{left:10%!important;right:auto!important;top:auto!important;bottom:17%!important}
+
 /* Shared closing section used across the site. */
 .founding-stage{
   min-height:760px;
@@ -177,6 +203,12 @@ h3,
 .founding-formation span{position:absolute;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.17);box-shadow:0 0 0 10px rgba(255,255,255,.025)}
 .founding-formation span:nth-child(1){left:50%;top:4%}.founding-formation span:nth-child(2){right:24%;top:10%}.founding-formation span:nth-child(3){right:8%;top:27%}.founding-formation span:nth-child(4){right:4%;top:50%}.founding-formation span:nth-child(5){right:12%;bottom:22%}.founding-formation span:nth-child(6){right:31%;bottom:7%}.founding-formation span:nth-child(7){left:50%;bottom:3%}.founding-formation span:nth-child(8){left:31%;bottom:7%}.founding-formation span:nth-child(9){left:12%;bottom:22%}.founding-formation span:nth-child(10){left:4%;top:50%}.founding-formation span:nth-child(11){left:8%;top:27%}.founding-formation span:nth-child(12){left:24%;top:10%}
 
+@media(max-width:1000px){
+  .advisor-page .advisor-coordination-section{grid-template-columns:1fr!important;gap:42px!important}
+  .advisor-page .coordination-copy{max-width:900px}
+  .advisor-page .specialist-network{margin:0 auto!important}
+}
+
 @media(max-width:680px){
   .community-reach-section,
   .advisor-application-section,
@@ -189,6 +221,7 @@ h3,
   }
   .advisor-page .relationship-center span{font-size:10px!important}
   .advisor-page .relationship-center strong{font-size:8px!important}
+  .advisor-page .specialist-network{max-width:none!important}
   .founding-stage{padding:100px 18px}
   .founding-stage h2{font-size:clamp(44px,13vw,62px)!important}
   .founding-stage p:not(.eyebrow){font-size:16px}
