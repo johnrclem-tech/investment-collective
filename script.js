@@ -73,7 +73,8 @@ if(main&&!main.id)main.id='main-content';
 const headerLinks=[
   ['The Advisor','advisor.html'],
   ['The Council','peer-councils.html'],
-  ['The Community','collective-intelligence.html']
+  ['The Community','collective-intelligence.html'],
+  ['Adventures','adventures.html']
 ];
 
 const footerLinks=[
@@ -81,6 +82,7 @@ const footerLinks=[
   ['The Advisor','advisor.html'],
   ['The Council','peer-councils.html'],
   ['The Community','collective-intelligence.html'],
+  ['Adventures','adventures.html'],
   ['How It Works','how-membership-works.html'],
   ['One Decision','one-decision.html'],
   ['Allocation Insights','allocation-insights.html'],
