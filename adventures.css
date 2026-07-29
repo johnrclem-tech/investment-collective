@@ -1,0 +1,49 @@
+.adventures-page .site-header{position:absolute;left:50%;transform:translateX(-50%);color:#fff;z-index:30}
+.adventures-page .site-header .brand,.adventures-page .site-header .nav-links a{color:#fff}
+.adventures-page .site-header .nav-cta{background:#fff;color:var(--navy)}
+
+.adventures-hero{background:radial-gradient(circle at 78% 72%,rgba(111,143,216,.16),transparent 32%),linear-gradient(180deg,#08111f 0%,#0b1728 100%)}
+.adventures-horizon{position:absolute;right:max(24px,calc((100vw - 1180px)/2));bottom:86px;width:min(44vw,620px);height:320px;opacity:.55}
+.adventures-horizon:before,.adventures-horizon:after{content:"";position:absolute;left:0;right:0;border-top:1px solid rgba(255,255,255,.12);transform:skewY(-8deg)}
+.adventures-horizon:before{bottom:104px}.adventures-horizon:after{bottom:58px;opacity:.55}
+.adventures-horizon span{position:absolute;bottom:0;width:88px;height:88px;border:1px solid rgba(255,255,255,.12);border-radius:50%;background:rgba(255,255,255,.025);box-shadow:0 0 0 16px rgba(255,255,255,.012)}
+.adventures-horizon span:nth-child(1){left:3%;bottom:20px}.adventures-horizon span:nth-child(2){left:29%;bottom:90px}.adventures-horizon span:nth-child(3){right:25%;bottom:44px}.adventures-horizon span:nth-child(4){right:1%;bottom:126px}
+
+.adventures-rhythm{padding-top:130px;padding-bottom:130px}
+.adventure-grid{display:grid;grid-template-columns:repeat(2,1fr);margin-top:72px;border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}
+.adventure-grid article{min-height:330px;padding:30px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column}
+.adventure-grid article>span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.13em;color:#9fafc2}
+.adventure-grid h3{margin:66px 0 16px;color:#fff;font-size:30px!important}
+.adventure-grid p{margin:0;color:#c7d0db;font-size:15px;line-height:1.7;max-width:500px}
+.adventure-grid small{display:block;margin-top:auto;padding-top:34px;color:#8193a7;font-size:11px;letter-spacing:.04em}
+
+.adventures-relationship{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+.adventure-relationship-map{position:relative;min-height:610px}
+.adventure-orbit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(91,108,255,.2);display:grid;place-items:start center}
+.adventure-orbit span{margin-top:20px;color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.orbit-community{width:530px;height:530px;border-color:rgba(111,143,216,.4);background:rgba(111,143,216,.025)}
+.orbit-council{width:390px;height:390px;border-color:rgba(124,92,255,.35);background:rgba(124,92,255,.025)}
+.orbit-advisor{width:255px;height:255px;border-color:rgba(38,159,191,.5);background:rgba(41,211,255,.035)}
+.adventure-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;padding:20px;text-align:center;background:linear-gradient(145deg,#fff,#e8eefc);box-shadow:0 20px 48px rgba(15,23,42,.14);color:var(--navy)}
+.adventure-core small{font-size:9px;text-transform:uppercase;letter-spacing:.11em;color:#68798a;font-weight:800}
+.adventure-core strong{font-size:18px;letter-spacing:-.03em}
+.adventure-core span{font-size:9px;line-height:1.35;color:#68798a}
+
+.adventures-principles{padding-top:130px;padding-bottom:130px}
+.adventures-principles>p:not(.eyebrow){max-width:780px;font-size:18px;line-height:1.7}
+
+@media(max-width:1000px){
+  .adventures-horizon{display:none}
+  .adventures-relationship{grid-template-columns:1fr!important;gap:54px}
+  .adventure-relationship-map{width:min(100%,680px);margin:auto}
+}
+@media(max-width:800px){.adventure-grid{grid-template-columns:1fr}}
+@media(max-width:900px){
+  .adventures-page .site-header{position:relative;left:auto;transform:none;background:var(--navy);width:calc(100% - 20px);padding-left:18px;padding-right:18px}
+}
+@media(max-width:620px){
+  .adventure-relationship-map{min-height:430px}
+  .orbit-community{width:370px;height:370px}.orbit-council{width:278px;height:278px}.orbit-advisor{width:190px;height:190px}
+  .adventure-core{width:110px;height:110px;padding:12px}.adventure-core strong{font-size:15px}
+  .adventure-grid article{min-height:280px}.adventure-grid h3{margin-top:45px}
+}
