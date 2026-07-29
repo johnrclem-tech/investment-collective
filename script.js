@@ -63,6 +63,28 @@ function applySectionNames(){
   });
 }
 
+function createBrandLockup(className='brand'){
+  const brand=document.createElement('a');
+  brand.href='index.html';
+  brand.className=className;
+  brand.setAttribute('aria-label',`${COMPANY_NAME} home`);
+  if(currentPage==='index.html'){
+    brand.classList.add('is-active');
+    brand.setAttribute('aria-current','page');
+  }
+
+  const mark=document.createElement('span');
+  mark.className='brand-mark';
+  mark.setAttribute('aria-hidden','true');
+  mark.innerHTML='<svg viewBox="0 0 64 64" focusable="false"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M49.8 14.2A25 25 0 1 0 54.5 38" stroke="currentColor" stroke-width="4.5"/><path d="M45.2 18.8A18.5 18.5 0 1 0 49.7 39" stroke="currentColor" stroke-width="3.5" opacity=".82"/><path d="M51.6 16.4A25 25 0 0 1 56.6 26" stroke="#45b9ff" stroke-width="4.5"/><path d="M16 43h9.5c3.7 0 5.4-.8 7.8-3.2l5.4-5.4c2.1-2.1 3.4-2.7 6.2-2.7H49" stroke="currentColor" stroke-width="3.6"/><circle cx="35.2" cy="37.5" r="3.8" stroke="currentColor" stroke-width="3"/><circle cx="48.7" cy="31.7" r="3.8" stroke="currentColor" stroke-width="3"/></g></svg>';
+
+  const wordmark=document.createElement('span');
+  wordmark.className='brand-wordmark';
+  wordmark.textContent=COMPANY_NAME;
+  brand.replaceChildren(mark,wordmark);
+  return brand;
+}
+
 applyCompanyName();
 applySectionNames();
 
@@ -121,7 +143,7 @@ function renderSharedHeader(){
   skipLink.href='#main-content';
   skipLink.textContent='Skip to content';
 
-  const brand=createNavLink(COMPANY_NAME,'index.html','brand');
+  const brand=createBrandLockup();
   const nav=document.createElement('nav');
   nav.className='nav-links';
   nav.setAttribute('aria-label','Primary navigation');
@@ -150,11 +172,10 @@ function renderSharedFooter(){
 
   const identity=document.createElement('div');
   identity.className='site-footer-identity';
-  const name=document.createElement('strong');
-  name.textContent=COMPANY_NAME;
+  const brand=createBrandLockup('footer-brand');
   const tagline=document.createElement('span');
   tagline.textContent='Independent Advice. Collective Intelligence.';
-  identity.replaceChildren(name,tagline);
+  identity.replaceChildren(brand,tagline);
 
   const nav=document.createElement('nav');
   nav.className='footer-links';
