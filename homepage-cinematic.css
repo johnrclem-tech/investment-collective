@@ -1,0 +1,154 @@
+.home-cinematic-section{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  padding:150px max(24px,calc((100vw - 1180px)/2));
+}
+.home-cinematic-heading{
+  position:relative;
+  z-index:2;
+  width:min(900px,76%);
+  min-width:50%;
+}
+.home-cinematic-heading h2{
+  margin:18px 0 28px;
+  max-width:900px;
+  font-size:clamp(54px,7vw,96px)!important;
+  line-height:.96!important;
+  letter-spacing:-.06em!important;
+}
+.home-cinematic-heading>p:not(.eyebrow){
+  max-width:780px;
+  font-size:18px;
+  line-height:1.72;
+}
+.home-cinematic-statements{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:34px;
+  margin-top:86px;
+  border-top:1px solid var(--line);
+}
+.home-cinematic-statements article{padding-top:28px}
+.home-cinematic-statements span,
+.home-community-lines span,
+.home-adventure-grid>article>span{
+  display:block;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.home-cinematic-statements span{color:#68798a}
+.home-cinematic-statements h3{margin:42px 0 14px}
+.home-cinematic-statements p{margin:0;font-size:15px;line-height:1.7}
+
+.council-home-section{
+  background:
+    radial-gradient(circle at 88% 18%,rgba(91,108,255,.10),transparent 28rem),
+    #eef2f7;
+  color:var(--ink);
+}
+.council-home-section:after{
+  content:"";
+  position:absolute;
+  right:-170px;
+  bottom:-300px;
+  width:680px;
+  height:680px;
+  border:1px solid rgba(91,108,255,.12);
+  border-radius:50%;
+  box-shadow:0 0 0 92px rgba(91,108,255,.025),0 0 0 184px rgba(91,108,255,.018);
+}
+
+.community-home-section{
+  min-height:820px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 82% 28%,rgba(69,185,255,.08),transparent 28rem),
+    radial-gradient(circle at 12% 88%,rgba(91,108,255,.13),transparent 32rem),
+    #07101d;
+  color:#fff;
+}
+.community-home-section .home-cinematic-heading>p:not(.eyebrow){color:#aebac8}
+.community-home-section .eyebrow{color:#9fafc2}
+.home-community-lines{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:84px;
+  border-top:1px solid rgba(255,255,255,.12);
+  border-left:1px solid rgba(255,255,255,.12);
+}
+.home-community-lines article{
+  min-height:235px;
+  padding:30px;
+  border-right:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.home-community-lines span{color:#9fafc2}
+.home-community-lines strong{
+  display:block;
+  margin-top:68px;
+  color:#eef3f8;
+  font-size:18px;
+  line-height:1.5;
+}
+
+.adventure-home-section{
+  background:
+    radial-gradient(circle at 78% 18%,rgba(91,108,255,.10),transparent 28rem),
+    #f4f1ea;
+  color:var(--ink);
+}
+.home-adventure-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-top:78px;
+}
+.home-adventure-grid article{
+  min-height:300px;
+  padding:32px;
+  border-radius:24px;
+  background:linear-gradient(145deg,#08111f,#13243d);
+  color:#fff;
+  box-shadow:0 24px 70px rgba(15,23,42,.13);
+}
+.home-adventure-grid>article>span{color:#45b9ff}
+.home-adventure-grid h3{
+  margin:76px 0 16px;
+  color:#fff;
+  font-size:30px!important;
+}
+.home-adventure-grid p{
+  margin:0;
+  max-width:500px;
+  color:#b9c4d1;
+  font-size:15px;
+  line-height:1.7;
+}
+
+@media(max-width:900px){
+  .home-cinematic-heading{width:100%;min-width:0}
+  .home-cinematic-statements,
+  .home-community-lines,
+  .home-adventure-grid{grid-template-columns:1fr}
+  .home-community-lines article{min-height:190px}
+}
+@media(max-width:620px){
+  .home-cinematic-section{padding:100px 18px}
+  .home-cinematic-heading h2{font-size:clamp(44px,13vw,66px)!important}
+  .home-cinematic-heading>p:not(.eyebrow){font-size:16px}
+  .home-cinematic-statements{margin-top:58px}
+  .home-community-lines{margin-top:58px}
+  .home-community-lines strong{margin-top:38px}
+  .home-adventure-grid{margin-top:58px}
+  .home-adventure-grid article{min-height:250px;padding:26px}
+  .home-adventure-grid h3{margin-top:52px;font-size:26px!important}
+}
